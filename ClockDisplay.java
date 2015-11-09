@@ -53,5 +53,15 @@ public class ClockDisplay
            min = min + 1;
         }
     }
+    
+        /**
+     * Mostrar la hora actual del reloj.
+     */
+    public String getTime()
+    {
+       String HoraAc = "%02d:%02d";
+       String resultado = String.format(HoraAc,horas,min);
+       return resultado;
+    }
     }
 

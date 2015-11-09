@@ -35,5 +35,23 @@ public class ClockDisplay
         System.out.println("Hora no admitida");
        }
     }
+    
+    /**
+     * Pasar los minutos del reloj (incluidas horas en su debido momento).
+     */
+    public void timeTick()
+    {
+       if (min >= 59 && horas >= 23) {
+           min = 00;
+           horas = 00;
+        }
+       else if (min >= 59 && horas <= 23){
+           min = 00;
+           horas = horas + 1;
+        }
+       else {
+           min = min + 1;
+        }
+    }
     }
 
